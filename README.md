@@ -1,11 +1,11 @@
 # Characteristic Modes Via Transition Matrix
 
 <img src="images/magEfourthPeak.png" alt="drawing" height="300"/>
-A characteristic electric field magnitude at the fourth resonance of a dielectric cylinder (relative permittivity 38, height 4.6 mm, radius 5.25 mm) as evaluated by FEM solver of Cosol Multiphysics.
+A characteristic electric field magnitude at the fourth resonance of a dielectric cylinder (relative permittivity 38, height 4.6 mm, radius 5.25 mm) as evaluated by FEM solver of Comsol Multiphysics.
 
 # Table of Contents
 - [Overview](#overview)
-- [Characteristic Modes Using FEM and Comsol Multiphysics](#Characteristic Modes Using FEM and Comsol Multiphysics)
+- [Characteristic Modes Using FEM and Comsol Multiphysics](#characteristic-modes-using-FEM-and-comsol-multiphysics)
 - [References](#references)
 
 # Overview
