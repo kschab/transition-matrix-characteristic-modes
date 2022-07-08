@@ -9,13 +9,13 @@ A characteristic electric field magnitude at the fourth resonance of a dielectri
 - [References](#references)
 
 # Overview
-References [1, 2] shows, how characteristic mode data (characteristic values, characteristic fields and other related quantities) can efficiently be obtained using transition matrix. An essential property of this framework is that characteristic modes can be obtained using any electromagnetic solver that is able to resolve a dynamic scattering scenario. As an example, and as an supplement to references [1, 2], this repository includes wrappers and post-processing routines for calculating characteristic modes using Finite Element Method of Comsol Multiphysics. These codes are posted as supplemental material to [1, 2] ( #references) and you can cite these references to reference this repository.
+References [1, 2] shows, how characteristic mode data (characteristic values, characteristic fields and other related quantities) can efficiently be obtained using transition matrix. An essential property of this framework is that characteristic modes can be obtained using any electromagnetic solver that is able to resolve a dynamic scattering scenario. As an example, and as an supplement to references [1, 2], this repository includes wrappers and post-processing routines for calculating characteristic modes using Finite Element Method of Comsol Multiphysics. These codes are posted as supplemental material to [1, 2] and you can cite these references to reference this repository.
 
 ## Contact information
 Questions and suggestions related these codes can be addressed to Lukas Jelinek, Czech Technical University in Prague, lukas.jelinek[at]fel.cvut.cz.
 
 ## Disclaimer
-Although documented and tested, these codes are intended as demonstrations of the procedures described in [1, 2] (#references) and are not written as general-purpose tools. Feel free to experiment and modify these codes, but at your own risk.
+Although documented and tested, these codes are intended as demonstrations of the procedures described in [1, 2] and are not written as general-purpose tools. Feel free to experiment and modify these codes, but at your own risk.
 
 # Characteristic Modes Using FEM and Comsol Multiphysics
 The electromagnetic model is supposed to be build in Comsol environment. The evaluation of transition matrix is then performed in MATLAB using MATLAB LiveLink feature in Comsol and using scattering formulation in the RF module. The scripts assume the use of excitation defined using MATLAB function. To enable this feature, the use of MATLAB functions must be enabled in “Comsol --> Preferences --> Security: Allow external libraries, Allow external Matlab functions”. Post-processing steps are performed in MATLAB. The scripts were tested in Comsol 6.0 and MATLAB 2020a. Paths “COMSOL60\Multiphysics\mli”, “FEM_Comsol” and their subdirectories must be in Matlab paths.
@@ -32,9 +32,11 @@ The evaluation of transition matrix is based on repetitive call of a loop in whi
 ## General 3D Example
 
 ## Converters
-The folder "FEM_Comsol" in its name space "+utilities" also contains several convertor tools transforming scattering dyadic to transition matrix ("getTfromSdyad.m") and vice versa ("getSdyadFromT.m") or transforming far fields into spherical vector wave expansion ("getFSWfromF.m") and vice versa ("getFfromFSW.m").
+The folder "FEM_Comsol" in its name space "+utilities" also contains several convertor tools transforming scattering dyadic to transition matrix ("getTfromSdyad.m") and vice versa ("getSdyadFromT.m") or transforming far fields into spherical vector wave expansion ("getFSWfromF.m") and vice versa ("getFfromFSW.m"). These provide direct connection between characteristic modes evaluated using transition matrix as described in [1, 2] and characteristic modes evaluated using scattering dyadic as described in [3].
 
 # References
 [1] M. Gustafsson, L. Jelinek, K. Schab, M. Capek,  "Unified Theory of Characteristic Modes: Part I -- Fundamentals", IEEE Transaction on Antennas and Propagation (submitted), arxiv: [2109.00063](https://arxiv.org/abs/2109.00063)
 
 [2] M. Gustafsson, L. Jelinek, K. Schab, M. Capek, "Unified Theory of Characteristic Modes: Part II -- Tracking, Losses, and FEM Evaluation", IEEE Transaction on Antennas and Propagation (submitted), arxiv: [2110.02106](https://arxiv.org/abs/2110.02106)
+
+[3] M. Capek, J. Lundgren, M. Gustafsson, K. Schab, and L. Jelinek, “Characteristic Mode Decomposition Using the Scattering Dyadic in Arbitrary Full-Wave Solvers”, IEEE Transaction on Antennas and Propagation (submitted), arxiv: [2206.06783](https://arxiv.org/abs/2206.06783)
